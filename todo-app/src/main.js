@@ -1,4 +1,4 @@
-import './style.css'
+import './style.css';
+import { App } from './store/todos/apps'; 
 
-
-console.log("Hello Vite!");
+App('app');
