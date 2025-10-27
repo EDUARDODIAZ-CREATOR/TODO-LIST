@@ -40,7 +40,7 @@ const loadStorage = () => {
  * @param {String} TodoId el identificador del todo que se va a eliminar
  */
 const deleteTodo = ( TodoId ) => {
-    throw new Error('Function not implemented.');
+    state.todos = state.todos.filter( todo => todo.id !== TodoId );
 }
 
 /**
@@ -52,15 +52,15 @@ const toggleTodo = ( TodoId ) => {
 }
 
 const deleteCompleted = () => {
-    throw new Error('Function not implemented.');
+    state.todos = state.todos.filter( todo => todo.done );
 }
 
 /**
  * 
- * @param {String} newFilter el nuevo filtro que se va a aplicar
+ * @param {Filters} newFilter el nuevo filtro que se va a aplicar
  */
 const setFilter = ( newFilter = Filters.All ) => {
-    throw new Error('Function not implemented.');
+    state.filter = newFilter;
 }
 
 const getCurrentFilter = () => {
